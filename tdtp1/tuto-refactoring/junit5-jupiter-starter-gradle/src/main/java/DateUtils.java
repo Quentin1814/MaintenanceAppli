@@ -9,4 +9,9 @@ public class DateUtils {
                                  LocalDate endingDate) {
         return date.isBefore(endingDate) && date.isAfter(startingDate);
     }
+
+    public static boolean isDateOutside(LocalDate date, LocalDate startingDate,
+                                       LocalDate endingDate) {
+        return !isDateBetween(date, startingDate, endingDate);
+    }
 }
